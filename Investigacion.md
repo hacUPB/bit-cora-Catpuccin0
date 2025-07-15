@@ -1,7 +1,6 @@
 # Arquitectura de computadores
 
-### + ¿Qué es un computador digital moderno
-### + ¿Cuáles son sus partes?
+### + ¿Qué es un computador digital moderno + ¿Cuáles son sus partes?
 Un computador digital moderno, es aquel que cumple con varias funciones, entre esas diferencio 4 componentes importantes.
 - La recolecta de datos
 - El procesamiento de información (CPU, "funciona como un cerebro")
