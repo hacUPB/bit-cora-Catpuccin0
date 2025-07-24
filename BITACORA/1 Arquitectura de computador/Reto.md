@@ -177,13 +177,18 @@ Esta en la memoria RAM y ocupada la pisicón 16. Si "i" es la primera variable d
  
 3- ¿En qué memoria y en qué dirección de memoria está almacenado el comentario //`i = 1000?`
 
+No ocupa ningun espacio dentro de la memoria debido a que no se le marca con el codigo, solo es una indicación para el programa que tiene como indicativo de empezar el conteo hacia atras desde el valor 1000
  
 4- ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?
 
+La primera instrucción del programa es el valor @1000, las instrucciones se almacenan en la memoria de instrucciones (ROM), que es diferente de la memoria de datos que lee, la cual es (RAM). Así está en la posición 0 de la ROM.
  
 5- ¿Qué son CONT y LOOP?
 
+CONT: Es la etiqueta que indica donde debe continuar el programa luego de haber salido del bucle
+LOOP: Es la etiqueta que marca el inicio del LOOP, o yo le digo bucle, indicando al programa hasta donde debe regresar para repetirlo
   
 6- ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?
 
+"i" es una variable en la RAM, mientras que el CONT es una etiqueta, que no guarda datos, solo marca las posiciones que debe de seguir el codigo. "i" es para continuar el flujo de CONT
   
