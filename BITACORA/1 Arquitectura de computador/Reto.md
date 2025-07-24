@@ -191,4 +191,12 @@ LOOP: Es la etiqueta que marca el inicio del LOOP, o yo le digo bucle, indicando
 6- ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?
 
 "i" es una variable en la RAM, mientras que el CONT es una etiqueta, que no guarda datos, solo marca las posiciones que debe de seguir el codigo. "i" es para continuar el flujo de CONT
-  
+
+12. Implemente en ensamblador:
+```
+  R4 = R1 + R2 + 69
+```
+seria: 
+```
+
+```
