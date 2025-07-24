@@ -69,10 +69,13 @@ D = D + M
 M = D
 ```
 - ¿Qué hace este programa?
+ ```
 Este lo programa lo que está haciendo es ir a la posición 16 y 17 que serian las variables var1 y var2 respectivamente, sumando los datos que estos almacenan y guardando el resultado en la variable 3, osea, posición 18. 
-
+```
 - En qué posición de la memoria está var1, var2 y var3? ¿Por qué en esas posiciones?
+```
 Estan en las posiciones 16,17,18 por que las anteriores a estas están almacenadas para datos de la computadora.
+```
 
 9. Considera el siguiente programa:
 ```
@@ -101,13 +104,19 @@ D=M+1
 M=D
 ```
 - ¿Qué hace este programa?
-
+```
+Este programa lo que está haciendo es almacenar un numero en la variable "i" y otro en la variable "sum", luego, daba un nuevo valor a la variable donde almacenamos el numero i, osea en "sum" con la suma de su valor anterior y el valor de la variable "i", y luego estaba dando a "i" el valor de la "sum" de su dato anterior mas 1.
+```
  
 - ¿En qué parte de la memoria RAM está la variable `i` y `sum`? ¿Por qué en esas posiciones?
+```
 
+```
  
 - Optimiza esta parte del código para que use solo dos instrucciones:
+```
 
+```
 
 ```
 // i = i + 1
