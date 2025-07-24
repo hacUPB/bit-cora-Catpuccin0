@@ -23,3 +23,11 @@ D=M
 M=D
 ```
 
+4. Lee lo que hay en la posición 100 de la RAM, resta 15 y guarda el resultado en la posición 100 de la RAM
+```
+@15
+D=A
+@100
+M=M-D
+```
+
