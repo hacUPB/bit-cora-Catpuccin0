@@ -110,7 +110,7 @@ Este programa lo que está haciendo es almacenar un numero en la variable "i" y 
  
 - ¿En qué parte de la memoria RAM está la variable `i` y `sum`? ¿Por qué en esas posiciones?
 ```
-
+Están en la posición 16 y 17, porque automitamente organiza las variables en el orden que aparezcan apartir de los espacios que tiene disponibles para usar, osea, apartir del 16, debido a que del 15 para abajo son reservadas para el computador segun el curso de NAND TETRIS.
 ```
  
 - Optimiza esta parte del código para que use solo dos instrucciones:
