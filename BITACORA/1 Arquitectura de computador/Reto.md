@@ -167,21 +167,23 @@ M=M-1
 (CONT)
 ```
 
-- ¿Qué hace este programa?
+1- ¿Qué hace este programa?
 
+Este programa lo que está haciendo es identificar un valor, donde "i" es igual a 0 puede saltarse el loop, pero sino, debe de continuarlo, donde por cada vez que pase se le resta un numero y asi hasta que cumpla con la condición para poder continuar. Es un tipo bucle que empieza con la variable "i" igual a 1000 y la disminuye en 1 en cada iteración. El bucle continúa hasta que el valor de "i" llega a 0. Una vez que "i" es 0, el programa salta a la etiqueta CONT, que marca el final del bucle
 
-- ¿En qué memoria está almacenada la variable i? ¿En qué dirección de esa memoria?
+2- ¿En qué memoria está almacenada la variable i? ¿En qué dirección de esa memoria?
+
+Esta en la memoria RAM y ocupada la pisicón 16. Si "i" es la primera variable declarada en el programa, se le asigna la primera dirección disponible.
+ 
+3- ¿En qué memoria y en qué dirección de memoria está almacenado el comentario //`i = 1000?`
 
  
-- ¿En qué memoria y en qué dirección de memoria está almacenado el comentario //`i = 1000?`
+4- ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?
 
  
-- ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?
-
- 
-- ¿Qué son CONT y LOOP?
+5- ¿Qué son CONT y LOOP?
 
   
-- ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?
+6- ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?
 
   
