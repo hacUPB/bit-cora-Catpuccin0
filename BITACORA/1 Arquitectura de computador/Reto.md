@@ -49,3 +49,123 @@ M=D
 @100
 D;JEQ
 ```
+
+7. Si el valor almacenado en la posición 100 de la RAM es menor a 100 salta a la posición 20 de la ROM.
+```
+@100
+D=M
+D=D-A
+@20
+D;JLT
+```
+
+8. Considera el siguiente programa:
+```
+@var1
+D = M
+@var2
+D = D + M
+@var3
+M = D
+```
+- ¿Qué hace este programa?
+Este lo programa lo que está haciendo es ir a la posición 16 y 17 que serian las variables var1 y var2 respectivamente, sumando los datos que estos almacenan y guardando el resultado en la variable 3, osea, posición 18. 
+
+- En qué posición de la memoria está var1, var2 y var3? ¿Por qué en esas posiciones?
+Estan en las posiciones 16,17,18 por que las anteriores a estas están almacenadas para datos de la computadora.
+
+9. Considera el siguiente programa:
+```
+i = 1
+sum = 0
+sum = sum + i
+i = i + 1
+```
+La traducción a lenguaje ensamblador del programa anterior es:
+```
+// i = 1
+@i
+M=1
+// sum = 0
+@sum
+M=0
+// sum = sum + i
+@i
+D=M
+@sum
+M=D+M
+// i = i + 1
+@i
+D=M+1
+@i
+M=D
+```
+- ¿Qué hace este programa?
+
+ 
+- ¿En qué parte de la memoria RAM está la variable `i` y `sum`? ¿Por qué en esas posiciones?
+
+ 
+- Optimiza esta parte del código para que use solo dos instrucciones:
+
+
+```
+// i = i + 1
+@i
+D=M+1
+@i
+M=D
+```
+
+10. Las posiciones de memoria RAM de 0 a 15 tienen los nombres simbólico R0 a R15. Escribe un programa en lenguaje ensamblador que guarde en R1 la operación 2 * R0.
+
+
+11. Considera el siguiente programa:
+```
+i = 1000
+LOOP:
+if (i == 0) goto CONT
+i = i - 1
+goto LOOP
+CONT:
+```
+La traducción a lenguaje ensamblador del programa anterior es:
+```
+// i = 1000
+@1000
+D=A
+@i
+M=D
+(LOOP)
+// if (i == 0) goto CONT
+@i
+D=M
+@CONT
+D;JEQ
+// i = i - 1
+@i
+M=M-1
+// goto LOOP
+@LOOP
+0;JMP
+(CONT)
+```
+
+- ¿Qué hace este programa?
+
+
+- ¿En qué memoria está almacenada la variable i? ¿En qué dirección de esa memoria?
+
+ 
+- ¿En qué memoria y en qué dirección de memoria está almacenado el comentario //`i = 1000?`
+
+ 
+- ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?
+
+ 
+- ¿Qué son CONT y LOOP?
+
+  
+- ¿Cuál es la diferencia entre los símbolos `i` y `CONT`?
+
+  
