@@ -31,4 +31,10 @@ Un programa es un caso de instrucciones codificadas que le permiten ejecutar tar
   A: Tiene doble función, guardando la memoria para acceder los datos de memoria, guardando los datos para operaciones.
 
 - ¿Para qué los usa la CPU?
-Es la unidad central que ejecuta las instrucciones y coordina las operaciones para que estas se realicen adecuadamente 
+Es la unidad central que ejecuta las instrucciones y coordina las operaciones para que estas se realicen adecuadamente
+
+## Actividad 4
+(((ACTIVIDAD HECHA EN CLASE)))
+
+## Actividad 5
+Subir link o pdf al repositorio con las notas tomadas 
