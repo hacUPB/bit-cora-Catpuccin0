@@ -200,3 +200,5 @@ seria:
 ```
 
 ```
+
+SUBIR LOS ARCHIVOS ASM DE CADA CODIGO 
