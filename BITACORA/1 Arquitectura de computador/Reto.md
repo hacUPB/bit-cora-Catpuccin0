@@ -115,15 +115,16 @@ Están en la posición 16 y 17, porque automitamente organiza las variables en e
  
 - Optimiza esta parte del código para que use solo dos instrucciones:
 ```
-
-```
-
-```
 // i = i + 1
 @i
 D=M+1
 @i
 M=D
+```
+Segun lo que yo veo la posible forma de optimizarlo seria:
+```
+@i 
+M=M+1
 ```
 
 10. Las posiciones de memoria RAM de 0 a 15 tienen los nombres simbólico R0 a R15. Escribe un programa en lenguaje ensamblador que guarde en R1 la operación 2 * R0.
