@@ -336,7 +336,7 @@ D;JEQ
 
 18. Utiliza esta herramienta para dibujar un bitmap en la pantalla. image Link: https://nand2tetris.github.io/web-ide/bitmap
 <img width="1441" height="837" alt="image" src="https://github.com/user-attachments/assets/97e1ef1b-370f-44b9-8fd6-5fd77292a691" />
-
+```
 function void draw(int location) {
 	var int memAddress; 
 	let memAddress = 16384+location;
