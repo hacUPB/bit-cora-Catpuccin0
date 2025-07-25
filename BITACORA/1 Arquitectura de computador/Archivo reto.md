@@ -268,36 +268,15 @@ sum = sum + arr[j];
 }
 ```
 
-En lenguaje ensamblador, sería:
-```
-@R10
-D=A
-@R1
-M=D
-@16
-D=A
-@R0
-M=D
-(LOOP)
-@R2
-D=M
-@R0
-A=M
-M=D
-@R0
-D=M
-@R0
-M=D+1
-@R1
-D=M
-M=D-1
-@R3
-D=M
-@R2
-D=D+M
-M=D
-@R1
-D=M
-@LOOP
-D;JGT
-```
+1 - ¿Qué hace este programa?
+Declara un arreglo de enteros (arr) de tamaño 10. Este programa lo que hace es sumar un numero con el dato anterior en un arreglo de 10 direcciones.
+  
+2 - ¿Cuál es la dirección base de arr en la memoria RAM?
+Es la posición 16, ya que no se usa desde el 0 al 15.
+  
+3 - ¿Cuál es la dirección base de sum en la memoria RAM y por qué?
+Usa un ciclo for para recorrer los 10 elementos del arreglo. En la posición 26 ya que es la siguiente libre despues de los 10 espacios del arreglo.
+  
+4 - ¿Cuál es la dirección base de j en la memoria RAM y por qué?
+Controlando el bucle llevando a la posicion, lo puedo decir que la variable "j" es una variable local que se utiliza dentro del ciclo for como contador. En Java, todas las variables locales se almacenan en una parte de la memoria llamada stack (pila), que se usa para guardar datos temporales durante la ejecución de métodos. Por lo tanto, la dirección base de j se encuentra en el stack.
+  
