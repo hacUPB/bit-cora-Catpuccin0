@@ -267,6 +267,39 @@ for (int j = 0; j < 10; j++) {
 sum = sum + arr[j];
 }
 ```
+en lenguaje ensamblador seria:
+```
+@R10
+D=A
+@R1
+M=D
+@16
+D=A
+@R0
+M=D
+(LOOP)
+@R2
+D=M
+@R0
+A=M
+M=D
+@R0
+D=M
+@R0
+M=D+1
+@R1
+D=M
+M=D-1
+@R3
+D=M
+@R2
+D=D+M
+M=D
+@R1
+D=M
+@LOOP
+D;JGT
+```
 
 1 - ¿Qué hace este programa?
 ```
