@@ -280,3 +280,18 @@ Usa un ciclo for para recorrer los 10 elementos del arreglo. En la posición 26 
 4 - ¿Cuál es la dirección base de j en la memoria RAM y por qué?
 Controlando el bucle llevando a la posicion, lo puedo decir que la variable "j" es una variable local que se utiliza dentro del ciclo for como contador. En Java, todas las variables locales se almacenan en una parte de la memoria llamada stack (pila), que se usa para guardar datos temporales durante la ejecución de métodos. Por lo tanto, la dirección base de j se encuentra en el stack.
   
+17. Implementa en lenguaje ensamblador:
+```
+if ( (D - 7) == 0) goto a la instrucción en ROM[69]
+```
+
+NOTA: El "goto" salta a la parte del código marcada con una etiqueta. "goto" sirve para saltar a otra parte del programa y continuar desde ahí.
+En ensamblador seria: 
+```
+@R0
+D=M
+@7
+D=D-A
+@69
+D;JEQ
+```
