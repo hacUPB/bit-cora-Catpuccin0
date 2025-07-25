@@ -302,5 +302,94 @@ D;JEQ
 ```
 
 18. Utiliza esta herramienta para dibujar un bitmap en la pantalla. image Link: https://nand2tetris.github.io/web-ide/bitmap
-!image <img width="1441" height="837" alt="image" src="https://github.com/user-attachments/assets/97e1ef1b-370f-44b9-8fd6-5fd77292a691" />
+<img width="1441" height="837" alt="image" src="https://github.com/user-attachments/assets/97e1ef1b-370f-44b9-8fd6-5fd77292a691" />
+
+function void draw(int location) {
+	var int memAddress; 
+	let memAddress = 16384+location;
+	// column 0
+	do Memory.poke(memAddress, 240);
+	do Memory.poke(memAddress +32, 264);
+	do Memory.poke(memAddress +64, 516);
+	do Memory.poke(memAddress +96, -31742);
+	do Memory.poke(memAddress +128, 18434);
+	do Memory.poke(memAddress +160, 12289);
+	do Memory.poke(memAddress +192, 1);
+	do Memory.poke(memAddress +224, 1);
+	do Memory.poke(memAddress +256, 1);
+	do Memory.poke(memAddress +288, 1);
+	do Memory.poke(memAddress +320, 2);
+	do Memory.poke(memAddress +352, 2);
+	do Memory.poke(memAddress +384, 4);
+	do Memory.poke(memAddress +416, 8);
+	do Memory.poke(memAddress +448, 16);
+	do Memory.poke(memAddress +480, 32);
+	do Memory.poke(memAddress +512, 64);
+	do Memory.poke(memAddress +544, 128);
+	do Memory.poke(memAddress +576, 256);
+	do Memory.poke(memAddress +608, 512);
+	do Memory.poke(memAddress +640, -31744);
+	do Memory.poke(memAddress +672, 18432);
+	do Memory.poke(memAddress +704, 12288);
+	// column 1
+	do Memory.poke(memAddress +1, 60);
+	do Memory.poke(memAddress +33, 66);
+	do Memory.poke(memAddress +65, 129);
+	do Memory.poke(memAddress +97, 256);
+	do Memory.poke(memAddress +129, 256);
+	do Memory.poke(memAddress +161, 512);
+	do Memory.poke(memAddress +193, 512);
+	do Memory.poke(memAddress +225, 512);
+	do Memory.poke(memAddress +257, 512);
+	do Memory.poke(memAddress +289, 512);
+	do Memory.poke(memAddress +321, 256);
+	do Memory.poke(memAddress +353, 256);
+	do Memory.poke(memAddress +385, 128);
+	do Memory.poke(memAddress +417, 64);
+	do Memory.poke(memAddress +449, 32);
+	do Memory.poke(memAddress +481, 16);
+	do Memory.poke(memAddress +513, 8);
+	do Memory.poke(memAddress +545, 4);
+	do Memory.poke(memAddress +577, 2);
+	do Memory.poke(memAddress +609, 1);
+	return;
+}
+```
+
+19. Analiza el siguiente programa en lenguaje de máquina:
+```
+0100000000000000
+1110110000010000
+0000000000010000
+1110001100001000
+0110000000000000
+1111110000010000
+0000000000010011
+1110001100000101
+0000000000010000
+1111110000010000
+0100000000000000
+1110010011010000
+0000000000000100
+1110001100000110
+0000000000010000
+1111110010101000
+1110101010001000
+0000000000000100
+1110101010000111
+0000000000010000
+1111110000010000
+0110000000000000
+1110010011010000
+0000000000000100
+1110001100000011
+0000000000010000
+1111110000100000
+1110111010001000
+0000000000010000
+1111110111001000
+0000000000000100
+1110101010000111
+```
+
 
