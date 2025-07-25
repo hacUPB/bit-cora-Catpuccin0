@@ -69,7 +69,7 @@ D = D + M
 M = D
 ```
 - ¿Qué hace este programa?
- ```
+```
 Este lo programa lo que está haciendo es ir a la posición 16 y 17 que serian las variables var1 y var2 respectivamente, sumando los datos que estos almacenan y guardando el resultado en la variable 3, osea, posición 18. 
 ```
 - En qué posición de la memoria está var1, var2 y var3? ¿Por qué en esas posiciones?
@@ -269,17 +269,22 @@ sum = sum + arr[j];
 ```
 
 1 - ¿Qué hace este programa?
+```
 Declara un arreglo de enteros (arr) de tamaño 10. Este programa lo que hace es sumar un numero con el dato anterior en un arreglo de 10 direcciones.
-  
+  ```
 2 - ¿Cuál es la dirección base de arr en la memoria RAM?
+```
 Es la posición 16, ya que no se usa desde el 0 al 15.
-  
+  ```
 3 - ¿Cuál es la dirección base de sum en la memoria RAM y por qué?
+```
 Usa un ciclo for para recorrer los 10 elementos del arreglo. En la posición 26 ya que es la siguiente libre despues de los 10 espacios del arreglo.
-  
+  ```
 4 - ¿Cuál es la dirección base de j en la memoria RAM y por qué?
+```
 Controlando el bucle llevando a la posicion, lo puedo decir que la variable "j" es una variable local que se utiliza dentro del ciclo for como contador. En Java, todas las variables locales se almacenan en una parte de la memoria llamada stack (pila), que se usa para guardar datos temporales durante la ejecución de métodos. Por lo tanto, la dirección base de j se encuentra en el stack.
-  
+```
+
 17. Implementa en lenguaje ensamblador:
 ```
 if ( (D - 7) == 0) goto a la instrucción en ROM[69]
@@ -295,3 +300,7 @@ D=D-A
 @69
 D;JEQ
 ```
+
+18. Utiliza esta herramienta para dibujar un bitmap en la pantalla. image Link: https://nand2tetris.github.io/web-ide/bitmap
+!image <img width="1441" height="837" alt="image" src="https://github.com/user-attachments/assets/97e1ef1b-370f-44b9-8fd6-5fd77292a691" />
+
