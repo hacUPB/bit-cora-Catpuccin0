@@ -426,4 +426,44 @@ function void draw(int location) {
 1110101010000111
 ```
 
-
+Analizando el codigo en lenguaje ensamblador, seria:
+```
+@16384   // Dirección base de la pantalla
+D=A      // D = 16384
+@16      // Usaremos RAM[16] como puntero temporal
+M=D      // RAM[16] = 16384
+@24576   // Dirección del teclado
+D=M      // D = valor del teclado
+@19      // Comparamos con RAM[19]
+D;JNE    // Si D ≠ RAM[19], continua; si son iguales, salta la sección siguiente
+```
+Lee la entrada del teclado y compara con un valor almacenado en RAM, en el espacio 19. Si son iguales, el salto se ejecuta (y se omite el siguiente bloque). Si son diferentes, el programa continúa con la siguiente sección.
+```
+@16
+D=M      // D = RAM[16]
+@16384
+D=D-A    // D = RAM[16] - 16384
+@4
+D;JLE    // Si D ≤ 0, salta a línea 4 (inicio del ciclo principal)
+@16
+AM=M-1   // RAM[16]--; A = RAM[16]
+M=0      // Borra la celda apuntada (RAM[A] = 0)
+@4
+0;JMP    // Salta al inicio del ciclo principal
+@16
+D=M      // D = RAM[16]
+@24576
+D=D-A    // D = RAM[16] - Teclado
+@4
+D;JGE    // Si D ≥ 0, vuelve al inicio del ciclo
+@16
+A=M      // A = RAM[16] (accede a dirección apuntada)
+M=-1     // Enciende píxel (RAM[A] = -1)
+@16
+M=M+1    // Avanza puntero: RAM[16]++
+@4
+0;JMP    // Regresa al inicio del ciclo
+```	
+Si se detecta cambio en la entrada del teclado:
+1 - Puede borrar píxeles (poner 0) si el puntero va hacia atrás.
+2 - Puede encender píxeles (poner -1) si va hacia adelante.
