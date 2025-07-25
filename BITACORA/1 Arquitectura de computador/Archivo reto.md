@@ -198,7 +198,36 @@ LOOP: Es la etiqueta que marca el inicio del LOOP, o yo le digo bucle, indicando
 ```
 seria: 
 ```
-
+@R1
+D=M
+@R2
+D=D+M
+@69
+D=D+M
+@R4
+M=D
 ```
 
-SUBIR LOS ARCHIVOS ASM DE CADA CODIGO 
+13. Implementa en ensamblador: 
+```
+if R0 >= 0 then R1 = 1
+else R1 = –1
+(LOOP)
+goto LOOP
+```
+
+En lenguaje de ensamblador: 
+```
+(LOOP)
+@R1
+D=M
+@POS
+D;JGE
+@R1
+M=-1
+(POS)
+@R1
+M=1
+@LOOP
+0;JMP
+```
