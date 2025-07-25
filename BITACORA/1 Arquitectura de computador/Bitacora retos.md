@@ -467,3 +467,255 @@ M=M+1    // Avanza puntero: RAM[16]++
 Si se detecta cambio en la entrada del teclado:
 1 - Puede borrar píxeles (poner 0) si el puntero va hacia atrás.
 2 - Puede encender píxeles (poner -1) si va hacia adelante.
+
+20. Implementa un programa en lenguaje ensamblador que dibuje el bitmap que diseñaste en la pantalla solo si se presiona la tecla “d”.
+Codigo del jack:
+
+```
+function void draw(int location) {
+	var int memAddress;
+	let memAddress = 16384 + location;
+	do Memory.poke(memAddress + 0, 0);
+	do Memory.poke(memAddress + 32, 0);
+	do Memory.poke(memAddress + 64, 528);
+	do Memory.poke(memAddress + 96, 1848);
+	do Memory.poke(memAddress + 128, 4092);
+	do Memory.poke(memAddress + 160, 4092);
+	do Memory.poke(memAddress + 192, 4092);
+	do Memory.poke(memAddress + 224, 2040);
+	do Memory.poke(memAddress + 256, 1008);
+	do Memory.poke(memAddress + 288, 480);
+	do Memory.poke(memAddress + 320, 192);
+	do Memory.poke(memAddress + 352, 0);
+	do Memory.poke(memAddress + 384, 0);
+	do Memory.poke(memAddress + 416, 0);
+	do Memory.poke(memAddress + 448, 0);
+	do Memory.poke(memAddress + 480, 0);
+	return;
+}
+```
+
+Debido a inconvenientes con el programa y tambien con mi diseño inicial tuve que reducir el tamaño del corazon pero despues pude hacerle un diseño identico pero mas pequeño pude solucionarlo:
+```
+(LOOP)
+    @24576
+    D=M
+    @100
+    D=D-A
+    @DRAW
+    D;JEQ
+    @LOOP
+    0;JMP
+
+(DRAW)
+    @16384
+    D=A
+    @R13
+    M=D
+    @0
+    D=A
+    @R13
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @32
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @528
+    D=A
+    @R13
+    D=M
+    @64
+    D=D+A
+    @R14
+    M=D
+    @528
+    D=A
+    @R14
+    A=M
+    M=D
+    @1848
+    D=A
+    @R13
+    D=M
+    @96
+    D=D+A
+    @R14
+    M=D
+    @1848
+    D=A
+    @R14
+    A=M
+    M=D
+    @4092
+    D=A
+    @R13
+    D=M
+    @128
+    D=D+A
+    @R14
+    M=D
+    @4092
+    D=A
+    @R14
+    A=M
+    M=D
+    @4092
+    D=A
+    @R13
+    D=M
+    @160
+    D=D+A
+    @R14
+    M=D
+    @4092
+    D=A
+    @R14
+    A=M
+    M=D
+    @4092
+    D=A
+    @R13
+    D=M
+    @192
+    D=D+A
+    @R14
+    M=D
+    @4092
+    D=A
+    @R14
+    A=M
+    M=D
+    @2040
+    D=A
+    @R13
+    D=M
+    @224
+    D=D+A
+    @R14
+    M=D
+    @2040
+    D=A
+    @R14
+    A=M
+    M=D
+    @1008
+    D=A
+    @R13
+    D=M
+    @256
+    D=D+A
+    @R14
+    M=D
+    @1008
+    D=A
+    @R14
+    A=M
+    M=D
+    @480
+    D=A
+    @R13
+    D=M
+    @288
+    D=D+A
+    @R14
+    M=D
+    @480
+    D=A
+    @R14
+    A=M
+    M=D
+    @192
+    D=A
+    @R13
+    D=M
+    @320
+    D=D+A
+    @R14
+    M=D
+    @192
+    D=A
+    @R14
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @352
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @384
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @416
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @448
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @0
+    D=A
+    @R13
+    D=M
+    @480
+    D=D+A
+    @R14
+    M=D
+    @0
+    D=A
+    @R14
+    A=M
+    M=D
+    @END
+    0;JMP
+
+(END)
+    @END
+    0;JMP
+```
