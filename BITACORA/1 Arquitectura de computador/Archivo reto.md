@@ -231,3 +231,16 @@ M=1
 @LOOP
 0;JMP
 ```
+
+14. Implementa en ensamblador:
+```
+R4 = RAM[R1]
+```
+
+En lengua de ensamblador: 
+```
+@R1
+D=M
+@R4
+M=D
+```
