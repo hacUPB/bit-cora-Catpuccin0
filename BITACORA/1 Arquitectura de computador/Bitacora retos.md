@@ -720,3 +720,32 @@ function void draw(int location) {
     0;JMP
 ```
 <img width="1860" height="891" alt="image" src="https://github.com/user-attachments/assets/9dfd7a83-2706-4eb6-a5e8-b1e1718d5a2e" />
+
+### Objetivo cumplido:
+Implementar un programa en lenguaje ensamblador Hack que monitoree la entrada del teclado,  la tecla "d" y, al detectar el valor 100, dibuje una figura en la memoria de video, en mi caso fue un corazon.
+-------
+### Es un bucle de espera (LOOP)
+- El programa entra en un bucle infinito monitoreando la dirección "24576", que representa el teclado.
+- Si se detecta el valor "100", se salta a la rutina (DRAW).
+
+### Rutina de dibujo (DRAW)
+- Se usa la dirección base "16384"  para comenzar a dibujar.
+- Con ayuda de los registros temporales "R13" y "R14", se calculan direcciones específicas en memoria.
+- En cada posición calculada, se escribe un valor distinto de cero para encender píxeles específicos.
+- La figura final corresponde a una forma diseñada manualmente con valores codificados.
+
+### Aprendizaje
+- Comprendi el funcionamiento de la memoria de pantalla y de teclado en el sistema Hack junto con el simulador NAND.
+- Se que se utilizó acceso directo a direcciones de memoria para manipular la dirección "24576".
+- Aunque quedo funcional, la solución es quedo muy larga y puede optimizarse con bucles o etiquetas para dibujos más complejos e inclusive para poder simplificar el codigo.
+
+RETOS:
+- El diseño que habia hecho al principio no lo leia, entonces opte por hacer el mismo pero mas pequeño para asi poder tener un mejor resultado
+- En varias ocasiones se me borro el diseño y la pagina se bugeaba y no me permitia seguir el dibujando
+- El traducir varias veces diversas cosas del hack al lenguaje emulador me confundi y mas al hacer un diseño se repetian muchas partes del codigo sin tener que cambiar la posicion.
+
+## 📁 Archivos entregados
+
+- "reto20.asm": código fuente ensamblador.
+- "bitacora retos.md": archivo explicativo de esta solución.
+
