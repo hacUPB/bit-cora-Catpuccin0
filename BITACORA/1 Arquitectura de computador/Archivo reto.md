@@ -244,3 +244,60 @@ D=M
 @R4
 M=D
 ```
+
+15. Implementa en ensamblador el siguiente problema. En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. Almacena un -1 en esa región de memoria
+```
+@R0
+A=M
+M=-1
+@R0
+M=M+1
+@R1
+M=M-1
+D=M
+@0
+D;JGT
+```
+
+16. Implementa en lenguaje ensamblador el siguiente programa:
+```
+int[] arr = new int[10];
+int sum = 0;
+for (int j = 0; j < 10; j++) {
+sum = sum + arr[j];
+}
+```
+
+En lenguaje ensamblador, sería:
+```
+@R10
+D=A
+@R1
+M=D
+@16
+D=A
+@R0
+M=D
+(LOOP)
+@R2
+D=M
+@R0
+A=M
+M=D
+@R0
+D=M
+@R0
+M=D+1
+@R1
+D=M
+M=D-1
+@R3
+D=M
+@R2
+D=D+M
+M=D
+@R1
+D=M
+@LOOP
+D;JGT
+```
