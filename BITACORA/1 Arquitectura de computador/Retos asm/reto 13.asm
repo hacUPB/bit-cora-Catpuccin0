@@ -1,0 +1,12 @@
+(LOOP)
+@R1
+D=M
+@POS
+D;JGE
+@R1
+M=-1
+(POS)
+@R1
+M=1
+@LOOP
+0;JMP
