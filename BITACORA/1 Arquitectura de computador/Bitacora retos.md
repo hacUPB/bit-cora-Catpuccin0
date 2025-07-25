@@ -495,7 +495,7 @@ function void draw(int location) {
 }
 ```
 
-Debido a inconvenientes con el programa y tambien con mi diseño inicial tuve que reducir el tamaño del corazon pero despues pude hacerle un diseño identico pero mas pequeño pude solucionarlo:
+### Debido a inconvenientes con el programa y tambien con mi diseño inicial tuve que reducir el tamaño del corazon pero despues pude hacerle un diseño identico pero mas pequeño pude solucionarlo:
 ```
 (LOOP)
     @24576
@@ -719,3 +719,4 @@ Debido a inconvenientes con el programa y tambien con mi diseño inicial tuve qu
     @END
     0;JMP
 ```
+<img width="1860" height="891" alt="image" src="https://github.com/user-attachments/assets/9dfd7a83-2706-4eb6-a5e8-b1e1718d5a2e" />
