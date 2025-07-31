@@ -44,3 +44,6 @@ M=-1         // Enciende el tercer píxel (y así sucesivamente)
 
 ## Actividad 2
 Ya lo analice y lo comprendi dentro de lo que cabe.
+
+## Actividad 3
+Vas a implementar y simular una modificación al retos 20 de la unidad anterior. Si se presiona la letra “d” muestras la imagen que diseñaste en el reto 18. Si no se presiona ninguna tecla, borraras la imagen.
