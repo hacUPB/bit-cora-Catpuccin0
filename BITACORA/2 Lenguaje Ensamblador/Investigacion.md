@@ -41,3 +41,6 @@ M=-1         // Enciende el tercer píxel (y así sucesivamente)
 @FIN         // Instrucción infinita para detener el programa
 0;JMP
 ```
+
+## Actividad 2
+Ya lo analice y lo comprendi dentro de lo que cabe.
