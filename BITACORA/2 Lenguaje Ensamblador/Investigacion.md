@@ -47,3 +47,13 @@ Ya lo analice y lo comprendi dentro de lo que cabe.
 
 ## Actividad 3
 Vas a implementar y simular una modificación al retos 20 de la unidad anterior. Si se presiona la letra “d” muestras la imagen que diseñaste en el reto 18. Si no se presiona ninguna tecla, borraras la imagen.
+
+## Actividad 4
+Hubo un inconveniente, no se me forma el corazon sino que se forma una linea:
+- Sin oprimir la tecla "D":
+<img width="1879" height="905" alt="image" src="https://github.com/user-attachments/assets/e99ec395-f877-46bd-ab8e-4d21a93c6c3e" />
+
+-Al oprimir la tecla "D";
+<img width="1849" height="824" alt="image" src="https://github.com/user-attachments/assets/32c3437a-42e8-4b34-be42-8d116daf0489" />
+
+
